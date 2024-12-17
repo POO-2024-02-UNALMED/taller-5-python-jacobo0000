@@ -30,3 +30,9 @@ class Anfibio(Animal):
     a =cls(nombre,edad,"negro y amarillo",genero,"rojo","false")
     cls.salamandras += 1
     return a
+  
+  def getColorPiel(self):
+    return self.colorPiel
+  
+  def isVenenoso(self):
+    return self.venenoso

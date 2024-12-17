@@ -30,3 +30,8 @@ class Ave(Animal):
     a = cls(nombre,edad,"montañas",genero,"blanco y amarillo")
     cls.aguilas += 1
     return a
+  
+  def getColorPlumas(self):
+    return self.colorPlumas
+  
+  
