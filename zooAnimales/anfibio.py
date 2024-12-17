@@ -1,6 +1,6 @@
-import zooAnimales.animals as animals
+import zooAnimales.animal as animal
 
-class Anfibio(animals):
+class Anfibio(animal):
   ranas = 0
   salamandras = 0
   listado = []
