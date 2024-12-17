@@ -1,6 +1,6 @@
-import animal
+import zooAnimales.animals as animals
 
-class Pez(animal):
+class Pez(animals):
   listado = []
   salmones = 0
   bacalaos = 0

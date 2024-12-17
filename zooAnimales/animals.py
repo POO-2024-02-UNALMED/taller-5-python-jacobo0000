@@ -1,4 +1,9 @@
-from zooAnimales import mamifero, anfibio, ave, pez, reptil
+from zooAnimales.mamiferos import Mamifero
+from zooAnimales.aves import Ave
+from zooAnimales.reptils import Reptil
+from zooAnimales.pezs import Pez
+from zooAnimales.anfibios import Anfibio
+
 
 class Animal:
   totalAnimales = 0
@@ -13,7 +18,7 @@ class Animal:
     self.zona = None
 
   def totalPortipo(self):
-    return f"Mamiferos : {mamifero.cantidadMamiferos()}\nAves : {ave.cantidadAnfibios()}\nReptiles : {reptil.cantidadReptiles()}\nPeces : {pez.cantidadPeces()}\nAnfibios : {anfibio.cantidadAnfibios()}"
+    return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAnfibios()}\nReptiles : {Reptil.cantidadReptiles()}\nPeces : {Pez.cantidadPeces()}\nAnfibios : {Anfibio.cantidadAnfibios()}"
 
   def toString(self):
     if self.zona == None:
