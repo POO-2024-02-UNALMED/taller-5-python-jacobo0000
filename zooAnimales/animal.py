@@ -1,10 +1,3 @@
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.ave import Ave
-from zooAnimales.reptil import Reptil
-from zooAnimales.pez import Pez
-from zooAnimales.anfibio import Anfibio
-
-
 class Animal:
   totalAnimales = 0
   def __init__(self):
@@ -18,7 +11,17 @@ class Animal:
     self.zona = None
 
   def totalPortipo(self):
-    return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAnfibios()}\nReptiles : {Reptil.cantidadReptiles()}\nPeces : {Pez.cantidadPeces()}\nAnfibios : {Anfibio.cantidadAnfibios()}"
+    from zooAnimales.mamifero import Mamifero  # Importación diferida
+    from zooAnimales.ave import Ave
+    from zooAnimales.reptil import Reptil
+    from zooAnimales.pez import Pez
+    from zooAnimales.anfibio import Anfibio
+    return(
+        f"Mamiferos : {Mamifero.cantidadMamiferos()}\n"
+        f"Aves : {Ave.cantidadAves()}\n"
+        f"Reptiles : {Reptil.cantidadReptiles()}\n"
+        f"Peces : {Pez.cantidadPeces()}\n"
+        f"Anfibios : {Anfibio.cantidadAnfibios()}")
 
   def toString(self):
     if self.zona == None:
