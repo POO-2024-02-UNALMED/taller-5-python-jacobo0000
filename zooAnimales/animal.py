@@ -10,8 +10,9 @@ class Animal:
     self.genero = genero
     self.zona = None
 
-  def totalPorTipo(self):
-    from zooAnimales.mamifero import Mamifero  # Importación diferida
+  @classmethod
+  def totalPorTipo(cls):
+    from zooAnimales.mamifero import Mamifero
     from zooAnimales.ave import Ave
     from zooAnimales.reptil import Reptil
     from zooAnimales.pez import Pez
