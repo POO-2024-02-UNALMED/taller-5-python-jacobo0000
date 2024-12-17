@@ -1,4 +1,4 @@
-from zooAnimales.animal import Animal
+from .animal import Animal
 
 class Ave(Animal):
   listado = []
@@ -22,11 +22,11 @@ class Ave(Animal):
   
   @classmethod
   def crearHalcon(cls,nombre,edad,genero):
-    a = cls.__init__(nombre,edad,"montañas",genero,"cafe glorioso")
+    a = cls(nombre,edad,"montañas",genero,"cafe glorioso")
     cls.halcones += 1
     return a 
-  
+  @classmethod
   def crearAguila(cls,nombre,edad,genero):
-    a = cls.__init__(nombre,edad,"montañas",genero,"blanco y amarillo")
+    a = cls(nombre,edad,"montañas",genero,"blanco y amarillo")
     cls.aguilas += 1
     return a

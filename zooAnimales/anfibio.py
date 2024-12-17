@@ -1,4 +1,4 @@
-from zooAnimales.animal import Animal
+from .animal import Animal
 
 class Anfibio(Animal):
   ranas = 0
@@ -22,11 +22,11 @@ class Anfibio(Animal):
   
   @classmethod
   def crearRana(cls,nombre,edad,genero):
-    a = cls.__init__(nombre,edad,"selva",genero,"rojo","true")
+    a = cls(nombre,edad,"selva",genero,"rojo","true")
     cls.ranas += 1
     return a 
-  
+  @classmethod
   def crearSalamandra(cls,nombre,edad,genero):
-    a =cls.__init__(nombre,edad,"negro y amarillo",genero,"rojo","false")
+    a =cls(nombre,edad,"negro y amarillo",genero,"rojo","false")
     cls.salamandras += 1
     return a
